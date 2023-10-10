@@ -5,5 +5,96 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(49, 49, 49);  /* need to change to Dark grey or Beige*/
 }
 
+.App{
+  background: rgb(92, 91, 91); /* middle 2nd dark - need to change to Darker grey or Darker beige */
+  margin: 20px auto;
+  width: 90%;
+  max-width: 700px;
+  color: #eee;
+}
+
+nav{
+  padding: 10px 20px;
+  text-align: center;
+  background: rgb(155, 154, 154) /* same color as the list items - need to change dark white or bright white */
+}
+
+nav h1{
+  margin: 10px 0;
+}
+
+nav ul{
+  padding: 0;
+}
+
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.todo-list{
+  margin: 20px;
+  padding: 0px;
+}
+.todo-list ul{
+  padding: 0;
+  list-style-type: none;
+}
+.todo-list li{
+  background: rgb(155, 154, 154); /* same color as nav bar - need to change dark white or bright white */
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #ddd;
+  font-size: 1.2em;
+}
+.todo-list li:hover{
+  opacity: 0.7;
+  text-decoration: line-through;
+}
+
+.todo-list .category {
+  font-size: 0.7em;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.empty{
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+form{
+  padding: 20px;
+}
+input[type='text']{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 6px 0;
+  background: rgb(36, 36, 36); /* input box: darkest color here */
+  color: #fff;
+  border: 0;
+}
+input[type='submit']{
+  margin: 10px auto;
+  background: rgb(43, 42, 42); /* button: change to black with white text or white with black text */
+  border: 0;
+  padding: 6px 20px;
+  display: block;
+  color: white;
+  border-radius: 5px;
+}
+
+input[type='submit']:hover {
+  box-shadow: 1px 1px 7px white;
+  transition: 0.3s; 
+  cursor: pointer;
+}
