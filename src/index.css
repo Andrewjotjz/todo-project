@@ -10,13 +10,15 @@ body {
 
 .App{
   background: rgb(92, 91, 91); /* middle 2nd dark - need to change to Darker grey or Darker beige */
-  margin: 20px auto;
+  margin: 40px auto;
   width: 90%;
   max-width: 700px;
   color: #eee;
+  text-align: center;
 }
 
 nav{
+  position: relative;
   padding: 10px 20px;
   text-align: center;
   background: rgb(155, 154, 154) /* same color as the list items - need to change dark white or bright white */
@@ -37,8 +39,8 @@ nav ul li {
 }
 
 .todo-list{
-  margin: 20px;
-  padding: 0px;
+  margin: 10px;
+  padding: 10px;
 }
 .todo-list ul{
   padding: 0;
@@ -94,7 +96,22 @@ input[type='submit']{
 }
 
 input[type='submit']:hover {
-  box-shadow: 1px 1px 7px white;
+  box-shadow: 1px 1px 7px black;
   transition: 0.3s; 
+  cursor: pointer;
+}
+
+.toggle {
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  margin: 10px auto;
+  background: rgb(43, 42, 42); /* button: change to black with white text or white with black text */
+  border: 0;
+  padding: 6px 20px;
+  display: block;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px black;
   cursor: pointer;
 }
