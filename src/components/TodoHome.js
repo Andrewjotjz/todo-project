@@ -1,9 +1,12 @@
 import { useContext, useState } from "react";
 import { TodoContext } from "../contexts/TodoContext";
+import { ThemeContext } from "../contexts/ThemeContext";
 
 const TodoHome = () => {
 
     const { todos, dispatch } = useContext(TodoContext);
+    const {isLightTheme, light, dark } = useContext(ThemeContext);
+    const theme =  isLightTheme ? light : dark;
 
     const [ task, setTask ] = useState('');
     const [ category, setCategory ] = useState('');
@@ -21,7 +24,7 @@ const TodoHome = () => {
     }
 
     return todos.length ? ( 
-    <div className="todo-list">
+    <div className="todo-list" style={{background: theme.bg, color: theme.syntax}}>
         <ul>
             { 
             todos.map((todo) => {
@@ -41,7 +44,7 @@ const TodoHome = () => {
         </form>
     </div>
     ) : (
-        <div className="empty">Woohoooo! You have cleared all your task :)
+        <div className="empty" style={{background: theme.bg, color: theme.syntax}}>Woohoooo! You have cleared all your task :)
         
         <form onSubmit={handleSubmit}>
             <input type="text" id="taskField" placeholder="Task" value={task} onChange={(e) => setTask(e.target.value)} required/>
